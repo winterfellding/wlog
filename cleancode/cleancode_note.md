@@ -55,3 +55,17 @@ theList是什么东西，为什么要去取theList中每个元素的第一个元
 
 	同理，也会造成混淆，例如一个add方法，到底是insert进入一张表，还是append在List后呢，这会造成混淆，直接使用更清
 	楚概念，如果是插入数据库，直接使用insertXXX， 如果是添加在List后，就使用appendXXX。
+
+##### 使用专业领域词语
+
+	例如一个类叫做AccountVisitor，很明显这就是一个使用了Visitor模式的类, 而一个JobQueue也很明显是一个队列。
+
+##### 使用针对问题的名字
+
+	当没用专业词语使用时，搞清楚问题到底是干什么的，然后以之进行命名。
+
+##### 加上有意义的名词前缀
+
+	例如看到firstName, lastName, idNo很明显是一个人，但如果只看到firstName的时候，可能会理解成地址名或者其他名字
+	，加上有意义的名字前缀，例如personFirstName, personLastName, personIdNo。
+	
