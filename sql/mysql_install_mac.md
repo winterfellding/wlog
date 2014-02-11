@@ -7,16 +7,20 @@
 	/usr/local/mysql/bin  sudo mysqld_safe to run server
 
 ##### connect to mysql server
-	Make sure the mysqld is opened in ActivityViewer, use Sequel Pro to open the connect with socket and then connect, the standard way is also ok, the host is 127.0.0.1(don't use localhost).
+	Make sure the mysqld is opened in ActivityViewer, use Sequel Pro to open the
+	 connect with socket and then connect, the standard way is also ok, the host is 
+	 127.0.0.1(don't use localhost).
 	
 ##### shutdown mysql server
 
-	we may use the mysqladmin in the /usr/local/mysql/bin directory, don't forget use the root user, sudo mysqladmin shutdown, and the mysqld process will shutdown, and you won't find it in the ActivityViewer
+	we may use the mysqladmin in the /usr/local/mysql/bin directory, don't forget 
+	use the root user, sudo mysqladmin shutdown, and the mysqld process will 	shutdown, and you won't find it in the ActivityViewer
 
 
 ##### something about shell
 	
-	e.g. I want to write an short cut for run goagent after intall and config it and I put it in /Applications/goagent,
+	e.g. I want to write an short cut for run goagent after intall and config it and 
+	I put it in /Applications/goagent,
 	I can write these code in a file with .sh ending,
 	
 	cd /Applications/goagent/local
