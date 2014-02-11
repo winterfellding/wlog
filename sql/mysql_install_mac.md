@@ -9,6 +9,9 @@
 ##### connect to mysql server
 	Make sure the mysqld is opened in ActivityViewer, use Sequel Pro to open the connect with socket and then connect, the standard way is also ok, the host is 127.0.0.1(don't use localhost).
 	
+##### shutdown mysql server
+
+	we may use the mysqladmin in the /usr/local/mysql/bin directory, don't forget use the root user, sudo mysqladmin shutdown, and the mysqld process will shutdown, and you won't find it in the ActivityViewer
 
 
 ##### something about shell
