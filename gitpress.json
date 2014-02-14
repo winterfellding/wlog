@@ -7,7 +7,7 @@
         "\\.(md||markdown)$"    : "markdown",
         "\\.(js||css||json)$"   : "code",
         "\\.html?$"             : "html",
-        ".*"                    : "text"   
+        "\\.pdf$"               : "pdf"   
     },
     "title"     : "Winterfall's Blog",
     "comment"   : {"type":"disqus", "short_name":"gitpress"}
