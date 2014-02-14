@@ -1,5 +1,5 @@
 {
-    "docs": ["post"],
+    "docs": ["html", "java", "javascript", "node", "python", "shell", "sql"],
     "template"  : "default",
     "perpage"   : 10,
     "order"     : "number",
