@@ -1,0 +1,14 @@
+{
+    "docs": ["html", "java", "javascript", "node", "python", "shell", "sql"],
+    "template"  : "default",
+    "perpage"   : 10,
+    "order"     : "number",
+    "types"     : {
+        "\\.(md||markdown)$"    : "markdown",
+        "\\.(js||css||json)$"   : "code",
+        "\\.html?$"             : "html",
+        "\\.pdf$"               : "pdf"   
+    },
+    "title"     : "Winterfall's Blog",
+    "comment"   : {"type":"disqus", "short_name":"gitpress"}
+}
