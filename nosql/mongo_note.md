@@ -25,3 +25,11 @@
             $lt     less than
             $gte    greater than or equals
             $lte    less than or equals
+            $or     $or key to an array, makes the or clause
+                    e.g. db.people.find({ $or: [{name: "jack"}, {age: {$exist: true}}]}), this will return the ones which name is jack or the ones has age property.
+            $and    and is similar to the or notation.
+            $all    所有元素都要在其中
+            $in     只要有元素在其中
+
+            dot notation
+                    点写法可以读取属性的子属性。
