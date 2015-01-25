@@ -33,3 +33,36 @@
 
             dot notation
                     点写法可以读取属性的子属性。
+    * cursor object
+   			hasNext
+   			next
+   			limit
+   			sort
+   			skip	cursor的各种whereClause
+   			
+   	* counter
+   		db.people.count({type: "exam"}) => like select count(id) from people.
+   		
+   	* update
+   		db.people.update( { name : "Smith" }, { name : "Thompson", salary : 50000})
+   			1st parameter is for retrieve, and 2nd parameter is for data updating.
+   			this operation will discard all information before the updating.
+   		db.people.update( { name : "Smith" }, { $set: { age : 31 }})   set
+   												 $inc     increase
+   												 $unset   remove property
+   												 $push
+   												 $pop
+   												 $pushAll these three are all array value
+   												 $pull
+   												 $pullAll remove the value-same
+   												 $addToSet
+   	* upsert
+   		if not exist, create a new document
+   		db.people.update({ name : "Smith" }, { age : 23 }, { upsert : 1 })
+   	* multi-update
+   		db.people.update( { }, { title : "Dr" }, { multi : true })
+   	* remove
+   		db.people.remove( { whereClause } )
+   	* drop
+   		
+   			
