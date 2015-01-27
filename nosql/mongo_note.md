@@ -64,5 +64,28 @@
    	* remove
    		db.people.remove( { whereClause } )
    	* drop
-   		
-   			
+  
+  	* getLastError (MongoDB V2.4 or later)
+  	db.runCommand({ getLastError : 1 })
+  		will show the last error.
+  
+### Mongo Java Classes
+
+	// get a mongo db client
+	MongoClient client = new MongoClient(new ServerAddress("localhost", 27017));
+	// get the database
+	DB db = client.getDb("course");
+   	DBCollection people = db.getCollection("people");
+   	DBObject doc = people.findOne();
+   	DBCursor cursor = people.find();
+   	while (cursor.hasNext()) {
+   		 DBObject doc = cursor.next();
+   		 System.out.println(doc);
+   	}
+   	
+   	DBCursor cursor1 = people.find(new BasicDBObject("name", "Jhon"));
+   	... // this will retrieve the name is Jhon's document data.
+   	
+   	// There's a builder interface for where clause building
+   	QueryBuilder query = QueryBuilder.start().xxx;
+   	query.get() will return an DBObject
