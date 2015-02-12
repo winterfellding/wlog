@@ -19,3 +19,59 @@
 	size(A, 1) % 矩阵的行, 2的话是列
 	length(A) % 矩阵行或者列中大的那个
 
+### Computing
+
+	A = [1 2; 3 4; 5 6]
+	B = [2 4; 5 6]
+	A * B % 矩阵相乘
+	A .* 2 % 相当于每个元素乘以2
+	a = [1;2;15;0.5]	
+	floor(a) %舍去小数
+	ceil(a) %进一位
+	A = magic(3)
+	max(A, [], 1) %获取每一列最大的
+	max(A, [], 2) %获取每一行最大的
+	max(max(A)) %获取矩阵最大数
+	max(A[:])	%先把矩阵转换成vector 获取矩阵最大数
+
+### Plotting
+
+	t = [0:0.01:0.98];
+	y1 = sin(2*pi*4*t);
+	y2 = cos(2*pi*4*t);
+	plot(t,y1);	 	% plot the sin function
+	hold on;		% don't replace with new function
+	plot(t,y2,'r');	% plot the cos function with red color
+	xlabel('time')
+	ylabel('value')
+	legend('sin', 'cos') %注释函数线
+	title('my plot')
+	print -dpng 'myPlot.png' % save as file
+	close
+	figure(1); plot(t, y1);
+	figure(2); plot(t, y2); % plot two figure
+	subplot(1, 2, 1);
+	plot(t, y1);
+	subplot(1, 2, 2);
+	plot(t, y2);		% plot two functions in one figure
+	clf;
+	A = magic(5);
+	imagesc(A), colorbar, colormap gray;
+
+### Control statement
+
+	if / for / while
+	if x == 1,
+		disp(1);
+	end;
+	
+	for i = 0:0.01:0.98,
+		disp(i);
+	end;
+	
+	i = 1;
+	while i <= 5,
+		disp(i);
+	end;
+
+	addpath('path'); % add the path to use in different directory
