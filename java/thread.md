@@ -66,3 +66,14 @@
     	}
 	}
 	
+### Executor
+
+	可以通过java.util.concurrent.ExecutorService来调用一个多线程任务
+	ExecutorService exec = Executors.newCachedThreadPool();
+	exec.execute(runnableReference);
+	
+### Runnable与Callable
+
+	除了Runnable接口，还有一个借口叫做Callable，Runnable继承之后不可以把值return出来，Callable接口
+	可以做到，一个类实现Callable接口，然后使用ExecutorService的submit方法调用，会得到一个Future<T>对象，
+	使用该对象的get方法，即可获得在Callable接口中定义的return值。
