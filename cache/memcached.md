@@ -2,8 +2,8 @@
 
 	在Linux使用包管理器安装`sudo apt-get install memcached`, 装完后memcached跑在localhost
 	的11211端口，如果要在其他机子上访问memcached，使用`service memcached stop`后，
-	`memcached -d -m 1024 -p 11211 -l 192.168.0.110`， l后的不能写成localhost/127.0.0.1
-	/0.0.0.0，否则会导致远端连接不上
+	`memcached -d -m 1024 -p 11211 -l 192.168.0.110`(使用0.0.0.0也可以)， l后的不能写成localhost/127.0.0.1,
+	/0.0.0.0，否则会导致远端连接不上，只可以本地连接
 
 ### 连接
 
